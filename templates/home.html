@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Boggle</h1>
+<p>
+<table class="board">
+    <tbody>
+      {% for row in board %}
+      <tr>
+        {% for cell in row %}
+        <td>{{ cell }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</p>
+<form>
+    <input type='text' name='possible_answer'>Your Answer</input>
+    <br>
+    <button name='submit_answer'>Submit</button>
+</form>
+
+
+
+
+{% endblock %}
